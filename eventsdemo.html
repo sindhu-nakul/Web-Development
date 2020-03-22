@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #div1{
+      background-color: #CC0099;
+      padding: 50px;
+      padding-top: 5px;
+      font-weight: bolder;
+      font-size:x-large;
+      text-align: center;
+    }
+    #div2{
+      background-color: #CC00CC;
+      padding: 50px;
+      padding-top: 5px;
+      font-weight: bolder;
+      font-size:x-large;
+
+      text-align: center;
+    }
+    #div3{
+      background-color: #CC66FF;
+      padding: 50px;
+      padding-top: 5px;
+      font-weight: bolder;
+      font-size:x-large;
+      text-align: center;
+    }
+
+  </style>
+
+
+
+  <meta content="text/html; charset=utf-8" http-equiv="content-type">
+</head>
+
+
+<body>
+<h2 style="text-align: center;">JS Event Listener Demo</h2>
+
+<div id="div3"> <p id="p3">Third Section</p>
+  <div id="div2"><p id="p2">Second Section</p>
+    <div id="div1"> <p id="p3"> First Section</p>
+    </div>
+  </div>
+</div>
+
+<script>
+
+  document.getElementById("div1").addEventListener("click", function(){
+    alert("You clicked on first section!!!");
+  });
+  document.getElementById("div2").addEventListener("click", function(){
+    alert("You clicked on second section!!!");
+  });
+  document.getElementById("div3").addEventListener("click", function(){
+    alert("You clicked on third section!!!");
+  });
+  </script>
+
+</body>
+</html>
