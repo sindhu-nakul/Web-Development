@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Closure Demo</title>
+
+
+
+        <!--A closure is an inner function that has access to the outer function’s variables in addition to it's own variables and global variables. In simple terms a closure is function inside a function. These functions, that is the inner and outer functions could be named functions or anonymous functions. In the example below we have an anonymous function inside another anonymous function. The variable incrementClickCount is assigned the return value of the self invoking anonymous function.-->
+
+    </head>
+
+    <body>
+
+        <div style="text-align: center; padding-top: 250px;" >
+
+            <!--If the pair of paranthesis is not included in the incrementCountOnClick it will execute only once and the inner function will not be called. On including paranthesis for incrementCountOnClick it will call the inner (second) anonymous function and the clickCount will be excuted and counter will get incremented-->
+
+            <input type="button" value="Click" onclick="alert(incrementCountOnClick())"/>
+
+        </div>
+        
+
+        <script type="text/javascript">
+
+
+            // Closure is function inside a function
+
+            //function() -> anonymous function is the function which does not contain function name. 
+
+            var incrementCountOnClick = (function ()
+            {
+                    var clickCount = 0;
+                    return function(){
+                        return ++clickCount;
+                    }
+
+                    
+            })();         // this additional pair of paranthesis () makes the outer anonymous function as a self invoking function (ie., starting function within the paranthesis)
+
+            
+        
+        </script>
+
+    </body>
+
+</html>
